@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'database_test.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await testDatabase();
+
   runApp(const ExpenseManagerApp());
 }
 
